@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Novo evento",
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/c0348e87-f07f-4602-a2f3-04ff0529d566/attendees
+Content-Type: application/json
+
+{
+  "name": "Diego Schinelo",
+  "email": "diego2@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/c0348e87-f07f-4602-a2f3-04ff0529d566
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+###
+
+GET http://localhost:3333/events/c0348e87-f07f-4602-a2f3-04ff0529d566/attendees?query=di
